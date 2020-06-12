@@ -6,19 +6,19 @@ public class Calculator {
 
 		if (operator == '+') {
 			System.out.println(a + b);
-		} else if(operator == '-') {
+		} else if (operator == '-') {
 			System.out.println(a - b);
-		} else if(operator == '*') {
+		} else if (operator == '*') {
 			System.out.println(a * b);
-		} else if(operator == '/') {
+		} else if (operator == '/') {
 			System.out.println((double)a / b);
-		} else if(operator == '^') {
+		} else if (operator == '^') {
 			long exponent = 1;
 			for (int i = 1; i <= b; i++) {
 				exponent *= a;
 			}
 			System.out.println(exponent);
-		} else if(operator == '%') {
+		} else if (operator == '%') {
 			System.out.println(a % b);
 		}
 	}
