@@ -1,6 +1,5 @@
 public class GuessNumber {
 	public static void main(String[] args) {
-		
 		int computerNum = 25;
 		int playerNum = 0;
 
