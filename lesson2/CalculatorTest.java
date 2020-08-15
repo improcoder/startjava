@@ -1,14 +1,12 @@
 import java.util.Scanner;
 
 public class CalculatorTest {
-
 	public static void main(String[] args) {
 		boolean restartGame = true;
+		Scanner scanner = new Scanner(System.in);
+		Calculator calculator = new Calculator();
 
 		while (restartGame) {
-			Scanner scanner = new Scanner(System.in);
-			Calculator calculator = new Calculator();
-
 			System.out.print("Enter the first number: ");
 			calculator.setNumberOne(scanner.nextInt());
 
@@ -21,16 +19,14 @@ public class CalculatorTest {
 			System.out.print("Calculation result: ");
 			calculator.calculate();
 
-			boolean checkGame = true;
-
-			while (checkGame) {
+			while (true) {
 				System.out.print("Do you want to continue? [yes/no]: ");
 				String scan = scanner.next();
 				if (scan.equals("no")) {
 					restartGame = false;
 					break;
 				} else if (scan.equals("yes") || scan.isEmpty()) {
-					checkGame = false;
+					break;
 				}
 			}
 		}
