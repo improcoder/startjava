@@ -28,7 +28,7 @@ public class Calculator {
 		return mathSign;
 	}
 
-	public static void calculate(int numberOne, int numberTwo, char mathSign) {
+	public void calculate() {
 		switch (mathSign) {
 			case '+':
 				System.out.println(numberOne + numberTwo);

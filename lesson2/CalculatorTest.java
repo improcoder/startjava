@@ -3,27 +3,23 @@ import java.util.Scanner;
 public class CalculatorTest {
 
 	public static void main(String[] args) {
-
 		boolean restartGame = true;
 
 		while (restartGame) {
-
 			Scanner scanner = new Scanner(System.in);
-
 			Calculator calculator = new Calculator();
-
 
 			System.out.print("Enter the first number: ");
 			calculator.setNumberOne(scanner.nextInt());
 
 			System.out.print("Enter math operator: ");
-			calculator.setOperator(scanner.next().charAt(0));
+			calculator.setMathSign(scanner.next().charAt(0));
 
 			System.out.print("Enter the second number: ");
 			calculator.setNumberTwo(scanner.nextInt());
 
 			System.out.print("Calculation result: ");
-			calculator.calculateTheValue(calculator.getNumberOne(), calculator.getNumberTwo(), calculator.getOperator());
+			calculator.calculate();
 
 			boolean checkGame = true;
 
