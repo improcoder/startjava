@@ -2,10 +2,34 @@ public class Calculator {
 
 	private int numberOne;
 	private int numberTwo;
-	private char operator;
+	private char mathSign;
 
-	public static void calculateTheValue(int numberOne, int numberTwo, char operator) {
-		switch (operator) {
+		public void setNumberOne(int numberOne) {
+		this.numberOne = numberOne;
+	}
+
+	public int getNumberOne() {
+		return numberOne;
+	}
+
+	public void setNumberTwo(int numberTwo) {
+		this.numberTwo = numberTwo;
+	}
+
+	public int getNumberTwo() {
+		return numberTwo;
+	}
+
+	public void setMathSign(char mathSign) {
+		this.mathSign = mathSign;
+	}
+
+	public char getMathSign() {
+		return mathSign;
+	}
+
+	public static void calculate(int numberOne, int numberTwo, char mathSign) {
+		switch (mathSign) {
 			case '+':
 				System.out.println(numberOne + numberTwo);
 				break;
@@ -31,29 +55,5 @@ public class Calculator {
 			default:
 				System.out.println("Wrong math operator!");
 		}
-	}
-
-	public void setNumberOne(int numberOne) {
-		this.numberOne = numberOne;
-	}
-
-	public int getNumberOne() {
-		return numberOne;
-	}
-
-	public void setNumberTwo(int numberTwo) {
-		this.numberTwo = numberTwo;
-	}
-
-	public int getNumberTwo() {
-		return numberTwo;
-	}
-
-	public void setOperator(char operator) {
-		this.operator = operator;
-	}
-
-	public char getOperator() {
-		return operator;
 	}
 }
